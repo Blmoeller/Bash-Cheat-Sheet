@@ -2,6 +2,9 @@
 
  A cheat sheet for bash commands.
 
+ Batch rename files consecutively
+  $ ls -v | cat -n | while read n f; do mv -n "$f" "test_0$n.png"; done
+
 ## Command History
 
 ```bash
