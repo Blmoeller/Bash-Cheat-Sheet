@@ -2,11 +2,19 @@
 
  A cheat sheet for bash commands.
 
- Batch rename files consecutively
+## Batch rename files consecutively
+```  
   $ ls -v | cat -n | while read n f; do mv -n "$f" "test_0$n.png"; done
-  
-``` 
-Video to images
+
+```
+
+## Remove ls highligh
+ - add below to the end of the .bashrc file 
+```
+LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
+```
+## Video to images 
+```
  ffmpeg -i <input vid file> -r <fps> <output name>
  Example --> ffmpeg -i Karl_Chochlea.mp4 -r 30 image-%4d.png
 
